@@ -87,3 +87,9 @@ points(X1_cond, X2_cond,
        pch = 16,
        col = rgb(1, 0, 0, 0.3))
 
+
+
+
+
+
+
