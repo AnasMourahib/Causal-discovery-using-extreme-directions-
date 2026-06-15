@@ -7,15 +7,15 @@ library(tailDepFun)
 library(parallel)
 
 
-source("Functions_Causality/Generate_Factor_Model.R")
-source("Functions_Causality/Loss_function.R")
-source("Functions_Causality/param_estim.R")
-source("Functions_Causality/Starting_points.R")
-source("Functions_Causality/stdf_Factormodel.R")
-source("Functions_Causality/Help_functions.R")
-source("Functions_Causality/cross_validation.R")
-source("Functions_Causality/main.R")
-
+source("Functions/Functions_PLS/Generate_Factor_Model.R")
+source("Functions/Functions_PLS/Loss_function.R")
+source("Functions/Functions_PLS/param_estim.R")
+source("Functions/Functions_PLS/Starting_points.R")
+source("Functions/Functions_PLS/stdf_Factormodel.R")
+source("Functions/Functions_PLS/Help_functions.R")
+source("Functions/Functions_PLS/cross_validation.R")
+source("Functions/Functions_PLS/main.R")
+source("Functions/Functions_PLS/penalization.R")
 
 
 
@@ -32,10 +32,16 @@ Z1 = rfrechet(n , alpha = 1)
 Z2 = rfrechet(n , alpha = 1)
 Z3 = rfrechet(n , alpha = 1)
 
-
+a21 = 1/2 
+a32 = 1/3
 X1 = Z1
 X2 = a21 * X1 + Z2
 X3 = a32 * X2 + Z3
+
+
+
+
+
 
 
 
